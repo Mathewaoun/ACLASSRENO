@@ -1,5 +1,4 @@
-@media only screen and (max-width: 600px) {
-    /* styles for devices with a screen width of 600px or less */
+@media only screen and (max-width: 1200px) and (max-height: 2550px) {
     .App-header li{
         display: flex;
         justify-content: space-between;
@@ -14,7 +13,6 @@
         display: flex;
         justify-content: center; /* horizontally center the logo */
         align-items: center; /* vertically center the logo */
-        margin-left: 60px;
     }
     .logo h1{
         font-size: 30px;
@@ -24,7 +22,7 @@
     }
     .logo img{
         padding-top: 80px;
-        width: 150px;
+        width: 120px;
       }
     .backgroundhome img{
         height: 100%;
