@@ -8,6 +8,7 @@
         margin-left: 10px;
         margin-right: 15px;
         margin-bottom: 100px;
+
     }
     .logo{
         display: flex;
@@ -16,13 +17,10 @@
         cursor: pointer;
         transition: all 0.5s ease;
         margin-top: 40px;
-
-
     }
     .logo img{
-        width: 300px;
+        width: 200px;}
 
-      }
     .backgroundhome img{
         height: 100%;
         width: 90%;
@@ -30,7 +28,7 @@
         margin-right: 10px;
     }
     .Center {
-        margin-top: 150px;
+        margin-top: 30px;
         padding-bottom: 600px;
       }
     .Center h1{
