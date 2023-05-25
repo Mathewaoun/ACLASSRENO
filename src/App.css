@@ -458,6 +458,7 @@ textarea {
   min-width: 200px;
   z-index: 2;
   padding-bottom: 70px;
+  border: 1px solid black;
 }
 .Image2 img{
   width: 100%;
