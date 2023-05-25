@@ -7,22 +7,14 @@ import Residental from './Pages/Residental';
 import Particle from './component/Particle';
 import Commercial from './Pages/commercial';
 import Image1 from './Pictures/Logo7.png';
-import './App.css';
+import './mobile.css';
 
 
 class App extends Component {
-  componentDidMount() {
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      var script = document.createElement("script");
-      script.src = "mobile.js";
-      document.head.appendChild(script);
-    }
-  }
-  
   render() {
     return (
       <div className='App'>
-        <>  
+        <>
           <Particle/>  
           <div>
           </div>
@@ -37,19 +29,17 @@ class App extends Component {
                 <Link to="/">Home</Link>
               </li>
               <li>
+                <Link to="/about" className='below'>About Us</Link>
+              </li>
+              <li>
                 <Link to="/Residental">Residental</Link>
+              </li>
+              <li>
+                <Link to="/contact" className='below' >Contact Us</Link>
               </li>
               <li>
               <Link to="/commercial">Commercial</Link>  
               </li>
-              <li>
-                <Link to="/about">About Us</Link>
-              </li>
-              
-              <li>
-                <Link to="/contact">Contact Us</Link>
-              </li>
-              
             </ul>
           </div>
           <div className='Route'>
