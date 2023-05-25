@@ -30,14 +30,16 @@ class App extends Component {
                 <Link to="/">Home</Link>
               </li>
               <li>
+                <Link to="/about" className='below'>About Us</Link>
+              </li>
+              <li>
                 <Link to="/Residental">Residental</Link>
               </li>
-              <li><Link to="/commercial">Commercial</Link></li>
               <li>
-                <Link to="/about">About Us</Link>
+                <Link to="/contact" className='below' >Contact Us</Link>
               </li>
               <li>
-                <Link to="/contact">Contact Us</Link>
+              <Link to="/commercial">Commercial</Link>  
               </li>
             </ul>
           </div>
