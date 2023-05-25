@@ -4,9 +4,10 @@
         justify-content: space-between;
         align-items: center;
         padding: 0;
-        font-size: 14px;
+        font-size: 15px;
         margin-bottom: 75px;
         margin-top: 10px;
+        margin-left: 10px;
     }
     .below{
       margin-top: 80px;
@@ -20,12 +21,14 @@
         margin-top: 50px;
     }
     .logo img{
-        width: 300px;}
+        width: 350px;
+        margin-left: 15px;
+      }
 
     .backgroundhome img{
         height: 100%;
         width: 90%;
-        margin-left: 20px;
+        margin-left: 18px;
         margin-right: 10px;
     }
     .Center {
