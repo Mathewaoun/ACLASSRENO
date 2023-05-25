@@ -11,14 +11,6 @@ import './App.css';
 
 
 class App extends Component {
-  componentDidMount() {
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      var script = document.createElement("script");
-      script.src = "mobile.js";
-      document.head.appendChild(script);
-    }
-  }
-  
   render() {
     return (
       <div className='App'>
