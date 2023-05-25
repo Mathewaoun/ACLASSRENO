@@ -6,7 +6,7 @@ import Contact from './Pages/contact';
 import Residental from './Pages/Residental';
 import Particle from './component/Particle';
 import Commercial from './Pages/commercial';
-import Image1 from './Pictures/IMAGELOGO.png';
+import Image1 from './Pictures/Logo6.png';
 import './App.css';
 import './mobile.css';
 
@@ -22,9 +22,6 @@ class App extends Component {
         </>
        <Router>
         <div className='logo'>
-          <h1>
-          A-Class Reno
-          </h1>
           <img src={Image1} alt=" "></img>
         </div>
            <div className="App-h">
