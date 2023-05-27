@@ -21,7 +21,7 @@ function Home (){
             <div className='Center'>
                 <h1>RENOVATION</h1>
                 <p>Residential & Commercial</p>
-                <p>Renovate Your Home, Live A Better Lifestyle</p>
+                <p>Your Partner in Construction, Bringing Ideas to Life</p>
                 <button onClick={() => {window.location.href = '/Residental';}}>View Project</button>
             </div>
             <div className="container">
