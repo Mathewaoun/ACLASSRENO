@@ -22,7 +22,7 @@ function Home (){
                 <h1>RENOVATION</h1>
                 <p>Residential & Commercial</p>
                 <p>Your Partner in Construction, Bringing Ideas to Life</p>
-                <button onClick={() => {window.location.href = '/Residental';}}>View Project</button>
+                <button onClick={() => {window.location.href = '/Residental';}}>View Projects</button>
             </div>
             <div className="container">
                 <div className="card">
@@ -83,7 +83,7 @@ function Home (){
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
             <div>
                 <div className="provide">

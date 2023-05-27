@@ -15,42 +15,38 @@
   align-items: center; /* vertically center the logo */
   font-size: 22px;
   font-weight: bold;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  font-family: 'Times New Roman', Times, serif;
-  color: white;
-  text-decoration: none;
-  z-index: 2;
 
 }
 .App-header ul{
   background-color: black;
-  height: 80px;
 
 }
 .App-header li{
   display: inline;
   font-family: 'Times New Roman', Times, serif;
-  padding-right: 90px;
-  padding-left: 90px;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
   z-index: 2;
-  
-  
-
+  transition: all 0.5s ease;
+  text-decoration: none;
+  background-color: #534e4e;
+  margin: 70px;
+  border-radius: 20px; 
+  text-align: center;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px; 
 }
 .App-header li:hover{
-  text-decoration: underline;
-  text-decoration-color: #fff;
-  text-decoration-style: solid;
-  color: rgb(115, 178, 250);
+  background-color: rgb(167, 167, 167);
   transition: all 0.5s ease;
 }  
 .App-header li a{
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
 } 
 .logo{
   display: flex;
