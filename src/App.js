@@ -6,7 +6,7 @@ import Contact from './Pages/contact';
 import Residental from './Pages/Residental';
 import Particle from './component/Particle';
 import Commercial from './Pages/commercial';
-import Image1 from './Pictures/Logo7.png';
+import Image1 from './Pictures/Logo (3).png';
 import './App.css';
 import './mobile.css';
 

@@ -46,7 +46,7 @@ const Contact = () => {
             <strong>
               <FontAwesomeIcon icon={faLocationDot} />
             </strong>{' '}
-            : Ottawa,Ontario
+            : Ottawa, Ontario
           </p>
         </div>
         <div className="contact-form">
