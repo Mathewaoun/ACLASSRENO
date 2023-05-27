@@ -43,10 +43,10 @@ class App extends Component {
           <div className='logo'>
             <img src={Image1} alt=" "></img>
           </div>
-          <div className={`App-h ${isMobile ? 'iphone-layout' : ''}`}>
+          <div className="App-h">
             <ul className="App-header">
-              {navItems.map((item, index) => (
-                <li key={item.path} className={`nav-item-${index + 1}`}>
+              {navItems.map(item => (
+                <li key={item.path}>
                   <Link to={item.path}>{item.name}</Link>
                 </li>
               ))}

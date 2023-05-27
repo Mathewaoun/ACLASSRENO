@@ -251,32 +251,12 @@
     .contact-form button:hover {
         background-color: #005ea3;
     }
-    /* Other existing styles */
+    
+      
+    
 
-.iphone-layout {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+    
 
-.iphone-layout .App-header {
-  flex-basis: 100%;
-  text-align: center;
-}
 
-.iphone-layout .nav-item-1 {
-  order: 1;
-}
-
-.iphone-layout .nav-item-2 {
-  order: 3;
-}
-
-.iphone-layout .nav-item-3 {
-  order: 2;
-}
-
-.iphone-layout .nav-item-4 {
-}
 }
  
