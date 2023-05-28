@@ -23,11 +23,11 @@ class App extends Component {
     ];
 
     const mobileNavOrder = [
-      { path: '/', name: 'Home' },
-      { path: '/about', name: 'About Us' },
-      { path: '/Residental', name: 'Residental' },
-      { path: '/contact', name: 'Contact Us' },
-      { path: '/commercial', name: 'Commercial' }
+      { path: '/', name: 'Home', className: 'up'},
+      { path: '/about', name: 'About Us', className: 'below'},
+      { path: '/Residental', name: 'Residental', className: 'up' },
+      { path: '/contact', name: 'Contact Us', className: 'below'},
+      { path: '/commercial', name: 'Commercial',className: 'up'}
     ];
 
     const navItems = isMobile ? mobileNavOrder : computerNavOrder; // Choose the appropriate navigation order
@@ -45,10 +45,10 @@ class App extends Component {
           </div>
           <div className="App-h">
             <ul className="App-header">
-              {navItems.map(item => (
-                <li key={item.path}>
-                  <Link to={item.path}>{item.name}</Link>
-                </li>
+            {navItems.map(item => (
+              <li key={item.path}>
+                <Link to={item.path} className={item.className}>{item.name}</Link>
+              </li>
               ))}
             </ul>
           </div>
