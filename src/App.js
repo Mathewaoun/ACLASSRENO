@@ -23,11 +23,11 @@ class App extends Component {
     ];
 
     const mobileNavOrder = [
-      { path: '/', name: 'Home', className: 'up'},
-      { path: '/about', name: 'About Us', className: 'below'},
-      { path: '/Residental', name: 'Residental', className: 'up' },
-      { path: '/contact', name: 'Contact Us', className: 'below'},
-      { path: '/commercial', name: 'Commercial',className: 'up'}
+      { path: '/', name: 'Home' },
+      { path: '/Residental', name: 'Residental' },
+      { path: '/commercial', name: 'Commercial' },
+      { path: '/about', name: 'About Us' },
+      { path: '/contact', name: 'Contact Us' }
     ];
 
     const navItems = isMobile ? mobileNavOrder : computerNavOrder; // Choose the appropriate navigation order
@@ -45,20 +45,20 @@ class App extends Component {
           </div>
           <div className="App-h">
             <ul className="App-header">
-            {navItems.map(item => (
-              <li key={item.path}>
-                <Link to={item.path} className={item.className}>{item.name}</Link>
-              </li>
+              {navItems.map(item => (
+                <li key={item.path}>
+                  <Link to={item.path} className={item.className}>{item.name}</Link>
+                </li>
               ))}
             </ul>
           </div>
           <div className='Route'>
             <Routes>
-              <Route exact path='/' element={<Home />}></Route>
-              <Route exact path='/Residental' element={<Residental />}></Route>
-              <Route exact path='/commercial' element={<Commercial />}></Route>
-              <Route exact path='/about' element={<About />}></Route>
-              <Route exact path='/contact' element={<Contact />}></Route>
+              <Route exact path='/' element={<Home />} />
+              <Route exact path='/Residental' element={<Residental />} />
+              <Route exact path='/commercial' element={<Commercial />} />
+              <Route exact path='/about' element={<About />} />
+              <Route exact path='/contact' element={<Contact />} />
             </Routes>
           </div>
         </Router>
