@@ -303,6 +303,9 @@
     .contact-form button:hover {
         background-color: #005ea3;
     }
+    .popup-images img{
+      width: 90%;
+    }
     
     
     

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image1 from '../Pictures/IMG_3169.jpg';
 import Image2 from '../Pictures/Image1.jpg';
 import Image3 from '../Pictures/IMG_7242.jpg';
@@ -20,41 +20,54 @@ import Image18 from '../Pictures/IMG_7282.jpg';
 import Image19 from '../Pictures/IMG_0936.jpg';
 import Image20 from '../Pictures/IMG_0935.jpg';
 
+function Residential() {
+  const [selectedImage, setSelectedImage] = useState(null);
 
+  const openPopup = (image) => {
+    setSelectedImage(image);
+  };
 
-  
-function Residental (){
-    return (
-        <div className='Residental1'>
-            <div className='Residential'>
-            <h1>Residential Jobs</h1></div>
-            <div className='Images'>
-                <div className='Image1'>
-                    <img src={Image1} alt=" "/>
-                    <img src={Image2} alt=" "/>
-                    <img src={Image3} alt=" "/>
-                    <img src={Image4} alt=" "/>
-                    <img src={Image5} alt=" "/>
-                    <img src={Image6} alt=" "/>
-                    <img src={Image7} alt=" "/>
-                    <img src={Image8} alt=" "/>
-                    <img src={Image9} alt=" "/>
-                    <img src={Image10} alt=" "/>
-                    <img src={Image11} alt=" "/>
-                    <img src={Image12} alt=" "/>
-                    <img src={Image13} alt=" "/>
-                    <img src={Image14} alt=" "/>
-                    <img src={Image15} alt=" "/>
-                    <img src={Image16} alt=" "/>
-                    <img src={Image17} alt=" "/>
-                    <img src={Image18} alt=" "/>
-                    <img src={Image19} alt=" "/>
-                    <img src={Image20} alt=" "/>
-                </div>
-            </div>
+  const closePopup = () => {
+    setSelectedImage(null);
+  };
+
+  return (
+    <div className="Residential-container">
+      <div className="Residential">
+        <h1>Residential Jobs</h1>
+      </div>
+      <div className="Images">
+        <div className="Image1">
+          <img src={Image1} alt=" " onClick={() => openPopup(Image1)} />
+          <img src={Image2} alt=" " onClick={() => openPopup(Image2)} />
+          <img src={Image3} alt=" " onClick={() => openPopup(Image3)} />
+          <img src={Image4} alt=" " onClick={() => openPopup(Image4)} />
+          <img src={Image5} alt=" " onClick={() => openPopup(Image5)} />
+          <img src={Image6} alt=" " onClick={() => openPopup(Image6)} />
+          <img src={Image7} alt=" " onClick={() => openPopup(Image7)} />
+          <img src={Image8} alt=" " onClick={() => openPopup(Image8)} />
+          <img src={Image9} alt=" " onClick={() => openPopup(Image9)} />
+          <img src={Image10} alt=" " onClick={() => openPopup(Image10)} />
+          <img src={Image11} alt=" " onClick={() => openPopup(Image11)} />
+          <img src={Image12} alt=" " onClick={() => openPopup(Image12)} />
+          <img src={Image13} alt=" " onClick={() => openPopup(Image13)} />
+          <img src={Image14} alt=" " onClick={() => openPopup(Image14)} />
+          <img src={Image15} alt=" " onClick={() => openPopup(Image15)} />
+          <img src={Image16} alt=" " onClick={() => openPopup(Image16)} />
+          <img src={Image17} alt=" " onClick={() => openPopup(Image17)} />
+          <img src={Image18} alt=" " onClick={() => openPopup(Image18)} />
+          <img src={Image19} alt=" " onClick={() => openPopup(Image19)} />
+          <img src={Image20} alt=" " onClick={() => openPopup(Image20)} />
         </div>
-
-    )
+      </div>
+      {selectedImage && (
+        <div className="popup-images">
+          <span onClick={closePopup}>&times;</span>
+          <img src={selectedImage} alt="" />
+        </div>
+      )}
+    </div>
+  );
 }
-  
-export default Residental;
+
+export default Residential;
