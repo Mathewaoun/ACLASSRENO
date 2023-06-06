@@ -89,7 +89,7 @@ function Home (){
                 <div className="provide">
                     <div className="container2">
                             <h1>We are versatile in our type of work</h1>
-                            <p>As a construction company, we are proud to offer a wide range of services to meet the <br/>diverse needs of our clients.We have experience working on a variety of projects,<br/> including residential and commercial buildings.</p>
+                            <p>As a construction company, we are proud to offer a wide range of services to meet the diverse needs of our clients. We have experience working on a variety of projects, including residential and commercial buildings.</p>
                         </div>
                         <div className="box-container2">
                             <div className="box2">

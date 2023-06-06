@@ -232,7 +232,13 @@ h3 {
   z-index: 2;
   padding-bottom: 2rem;
 }
-
+.container2 p{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 500px;
+  margin-right: 500px;
+}
 
 .box-container2 {
   display: flex;

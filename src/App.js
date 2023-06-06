@@ -10,6 +10,7 @@ import Image1 from './Pictures/test.png';
 import './App.css';
 import './mobile.css';
 
+
 class App extends Component {
   render() {
     const isMobile = window.innerWidth < 768; // Check if the user is on a mobile device
