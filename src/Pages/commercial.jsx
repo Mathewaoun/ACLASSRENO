@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faArrowRight} from '@fortawesome/free-solid-svg-icons';
+import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 import Image1 from '../Pictures/IMG_0775.jpeg';
 import Image2 from '../Pictures/IMG_0785.jpeg';
 import Image3 from '../Pictures/IMG_0781.jpeg';
@@ -17,13 +20,35 @@ import Image15 from '../Pictures/IMG_3142.jpg';
 import Image16 from '../Pictures/IMG_3146.jpg';
 
 function Commercial (){
+    const [popupVisible, setPopupVisible] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    const openPopup = (image) => {
-      setSelectedImage(image);
+    useEffect(() => {
+    const images = document.querySelectorAll('.gallery-img');
+    images.forEach((image) => {
+      image.onclick = () => {
+        setSelectedImage(image.getAttribute('src'));
+        setPopupVisible(true);
+      };
+    });
+    }, []);
+
+    const handlePrevImage = () => {
+    const images = document.querySelectorAll('.gallery-img');
+    const currentIndex = Array.from(images).findIndex(
+      (image) => image.getAttribute('src') === selectedImage
+    );
+    const prevIndex = (currentIndex - 1 + images.length) % images.length;
+    setSelectedImage(images[prevIndex].getAttribute('src'));
     };
-    const closePopup = () => {
-      setSelectedImage(null);
+
+    const handleNextImage = () => {
+    const images = document.querySelectorAll('.gallery-img');
+    const currentIndex = Array.from(images).findIndex(
+      (image) => image.getAttribute('src') === selectedImage
+    );
+    const nextIndex = (currentIndex + 1) % images.length;
+    setSelectedImage(images[nextIndex].getAttribute('src'));
     };
     return (
         <div className="commercial1">
@@ -31,28 +56,35 @@ function Commercial (){
             <h1>Commerical Jobs</h1></div>
                 <div className='Images'>
                 <div className='Image2'>
-                <img src={Image1} alt=" " onClick={() => openPopup(Image1)} />
-                <img src={Image2} alt=" " onClick={() => openPopup(Image2)} />
-                <img src={Image3} alt=" " onClick={() => openPopup(Image3)} />
-                <img src={Image4} alt=" " onClick={() => openPopup(Image4)} />
-                <img src={Image5} alt=" " onClick={() => openPopup(Image5)} />
-                <img src={Image6} alt=" " onClick={() => openPopup(Image6)} />
-                <img src={Image7} alt=" " onClick={() => openPopup(Image7)} />
-                <img src={Image8} alt=" " onClick={() => openPopup(Image8)} />
-                <img src={Image9} alt=" " onClick={() => openPopup(Image9)} />
-                <img src={Image10} alt=" " onClick={() => openPopup(Image10)} />
-                <img src={Image11} alt=" " onClick={() => openPopup(Image11)} />
-                <img src={Image12} alt=" " onClick={() => openPopup(Image12)} />
-                <img src={Image13} alt=" " onClick={() => openPopup(Image13)} />
-                <img src={Image14} alt=" " onClick={() => openPopup(Image14)} />
-                <img src={Image15} alt=" " onClick={() => openPopup(Image15)} />
-                <img src={Image16} alt=" " onClick={() => openPopup(Image16)} />
+                <img src={Image1} alt="" className="gallery-img" />
+                <img src={Image2} alt="" className="gallery-img" />
+                <img src={Image3} alt="" className="gallery-img" />
+                <img src={Image4} alt="" className="gallery-img" />
+                <img src={Image5} alt="" className="gallery-img" />
+                <img src={Image6} alt="" className="gallery-img" />
+                <img src={Image7} alt="" className="gallery-img" />
+                <img src={Image8} alt="" className="gallery-img" />
+                <img src={Image9} alt="" className="gallery-img" />
+                <img src={Image10} alt="" className="gallery-img" />
+                <img src={Image11} alt="" className="gallery-img" />
+                <img src={Image12} alt="" className="gallery-img" />
+                <img src={Image13} alt="" className="gallery-img" />
+                <img src={Image14} alt="" className="gallery-img" />
+                <img src={Image15} alt="" className="gallery-img" />
+                <img src={Image16} alt="" className="gallery-img" />
                 </div>
             </div>
-            {selectedImage && (
-                <div className="popup-images">
-                <span onClick={closePopup}>&times;</span>
-                <img src={selectedImage} alt="" />
+            {popupVisible && (
+            <div className="popup-images">
+          <span className="popup-close" onClick={() => setPopupVisible(false)}> &times;
+          </span>
+          <img src={selectedImage} alt="" />
+          <button className="popup-prev" onClick={handlePrevImage}>
+          <FontAwesomeIcon icon={faArrowLeft}/>
+          </button>
+          <button className="popup-next" onClick={handleNextImage}>
+            <FontAwesomeIcon icon={faArrowRight}/>
+          </button>
         </div>
       )}
     </div>
