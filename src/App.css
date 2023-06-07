@@ -281,14 +281,12 @@ h3 {
   box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.2);
   background-color: white;
   border-radius: 0.5rem;
-  margin-top: 25px;
+  margin-top: 80px;
   margin-left: 210px;
-  margin-bottom: 25px;
   margin-right: 210px;
   padding-top: 0 rem;
   font-family: 'Times New Roman', Times, serif;
   z-index: 2;
-  
 }
 
 .contact-info,
