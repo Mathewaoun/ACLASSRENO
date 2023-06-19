@@ -1,0 +1,15 @@
+
+/* 
+import Image1 from '../Pictures/IMG_0775.jpeg';
+<img src={Image1} alt="" className="gallery-img" />
+import Image2 from '../Pictures/IMG_0785.jpeg';
+import Image3 from '../Pictures/IMG_0781.jpeg';
+import Image4 from '../Pictures/IMG_0783.jpeg';
+<img src={Image2} alt="" className="gallery-img" />
+<img src={Image3} alt="" className="gallery-img" />
+<img src={Image4} alt="" className="gallery-img" />
+
+
+
+
+*/
